@@ -50,7 +50,7 @@ export const NavbarGlobal = (props) => {
     }
 
     const HandleModal = () => {
-      dispatch(toggleModal({ type: 'testing' }))
+      dispatch(toggleModal({type: 'testing'}))
     }
 
     const icon = themeSelection === 'light' ? <HiMoon  size={40} /> : <CgSun  size={40} />
