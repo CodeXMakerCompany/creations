@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavbarGlobal } from "../global/navbar.global";
+import { NavbarGlobal } from "../global/mainLayout.global";
 import { useLocation } from 'react-router-dom'
 
 const Home = () => {

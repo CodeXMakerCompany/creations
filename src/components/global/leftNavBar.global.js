@@ -2,13 +2,12 @@ import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-
+import { CgMenuRound } from "react-icons/cg";
 import { items } from "../config/navbar.items";
 
 const useStyles = makeStyles({
@@ -20,7 +19,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const TemporaryDrawer = () => {
+export const TemporaryDrawer = (props) => {
   const classes = useStyles();
   const [state, setState] = React.useState({
     top: false,
@@ -52,21 +51,22 @@ export const TemporaryDrawer = () => {
       <List>
         {items.map((i, index) => (
           <ListItem button key={i.text}>
-            <ListItemIcon>
-              
-            </ListItemIcon>
+            <ListItemIcon></ListItemIcon>
             <ListItemText primary={i.text} />
           </ListItem>
         ))}
       </List>
       <Divider />
-      
     </div>
   );
 
   return (
     <>
-      <Button onClick={toggleDrawer("left", true)}>Open</Button>
+      <CgMenuRound
+        onClick={toggleDrawer("left", true)}
+        style={{ cursor: "pointer", fontSize: "30px" }}
+        className={props.specialClass}
+      />
       <Drawer
         anchor={"left"}
         open={state["left"]}
