@@ -16,7 +16,8 @@ import { themes } from "../../styles/theme";
 import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
 import { useDispatch } from 'react-redux';
-import { activate, toggleModal } from "../../actions/modal.actions";
+import { toggleModal } from "../../actions/modal.actions";
+import { openSnackBar } from "../../actions/snackbar.actions";
 //Main components
 
 
@@ -53,6 +54,10 @@ export const NavbarGlobal = (props) => {
       dispatch(toggleModal({type:'testing'}))
     }
 
+    const HandleSnackBar = () => {
+      dispatch(openSnackBar({ status: true, type:'success', message: 'This is a succes item'}))
+    }
+
     const icon = themeSelection === 'light' ? <HiMoon  size={40} /> : <CgSun  size={40} />
 
     return (
@@ -76,6 +81,9 @@ export const NavbarGlobal = (props) => {
                 </Box>
                 <div>
                   <button onClick={() => HandleModal()} >click me</button>
+                </div>
+                <div>
+                  <button onClick={() => HandleSnackBar()} >snack bar</button>
                 </div>
             </div>
           </ThemeProvider>

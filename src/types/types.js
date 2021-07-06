@@ -1,3 +1,4 @@
 export const types = {
-    activateModal : 'Activate Modal'
+    activateModal : 'Activate Modal',
+    activateSnackBar: 'Activate SnackBar'
 }
