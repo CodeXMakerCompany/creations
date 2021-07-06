@@ -18,7 +18,9 @@ import { HiMoon } from "react-icons/hi";
 import { useDispatch } from 'react-redux';
 import { toggleModal } from "../../actions/modal.actions";
 import { openSnackBar } from "../../actions/snackbar.actions";
+
 //Main components
+import { TemporaryDrawer } from "../global/leftNavBar.global";
 
 
 
@@ -66,6 +68,8 @@ export const NavbarGlobal = (props) => {
           <HideOnScroll {...props}>
             <AppBar>
               <Toolbar >
+                <TemporaryDrawer />
+
                 <Typography variant="h6">Scroll to Hide App Bar</Typography>
                 <div onClick={ changeTheme } style={{color: themes[themeSelection].titleColor}}>
                 { icon}

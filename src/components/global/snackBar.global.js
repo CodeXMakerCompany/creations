@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 // import { openSnackBar } from "../../actions/snackbar.actions";
-import { SuccessSnackbar } from "./snackbars/success.snackbar";
+import { SuccessSnackbar } from "./snackbars/simple.snackbar";
 
 export const SnackBarWrapper = () => {
   const { content } = useSelector((state) => state.snackbar);
