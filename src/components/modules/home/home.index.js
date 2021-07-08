@@ -6,6 +6,8 @@ export const HomeIndex = () => {
     return (
         <div>
             <h3 className={classes.root}>This is the home index</h3>
+
+            <p>Lets test a formulary</p>
         </div>
     )
 }

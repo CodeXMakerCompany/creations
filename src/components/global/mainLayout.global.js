@@ -53,7 +53,7 @@ export const NavbarGlobal = (props) => {
         openSnackBar({
           status: true,
           type: "success",
-          message: "Blink blink sunshine 💡",
+          message: "Blink blink sunshine 🌟",
         })
       )
     }
