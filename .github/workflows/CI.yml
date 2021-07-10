@@ -30,6 +30,8 @@ jobs:
       run: npm install
     - name: Adding jest
       run: npm install --save-dev jest
+    - name: Adding babel-jest
+      run : npm install --save-dev babel-jest
     - name: Testing with jest  
       run : npm test
     - name: Testing Clean Build
