@@ -1,4 +1,6 @@
 export const types = {
     activateModal : 'Activate Modal',
-    activateSnackBar: 'Activate SnackBar'
+    activateSnackBar: 'Activate SnackBar',
+    login: 'Login',
+    logout: 'Logout'
 }

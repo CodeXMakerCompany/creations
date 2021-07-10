@@ -1,7 +1,7 @@
 import { useSnackbar } from 'notistack';
 import React, { useEffect } from 'react'
 
-export const SuccessSnackbar = (props) => {
+export const SimpleSnackbar = (props) => {
     const { enqueueSnackbar } = useSnackbar();
     const { message, type } = props.content;
     useEffect(() => {
